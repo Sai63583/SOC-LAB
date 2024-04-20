@@ -1,0 +1,91 @@
+5. COURSE NAME: JAVASCRIPT
+5. a) Module Name: Creating Arrays, Destructuring Arrays, Accessing Arrays, Array Methods Create an array of objects having movie details. The object should include the movie name, starring, language, and ratings. Render the details of movies on the page using the array.
+
+PROGRAM: -
+<!DOCTYPE html>
+<html>
+<head>
+<title>Array of object</title>
+</head>
+<body>
+<p id = "demo"></p>
+<script>
+let movies = [
+{
+"name": "ice-age",
+"starring": "biden",
+"language": "english",
+"rating":5
+},
+{
+"name": "Raven",
+"starring": "cool",
+"language": "english",
+"rating":5
+},
+{
+"name": "coco",
+"starring": "biden",
+"language": "english",
+"rating":5
+}
+];
+document.write(movies[1]);
+</script>
+</body>
+</html>
+
+5. b) Module Name: Introduction to Asynchronous Programming, Callbacks, Promises,Async and Await, Executing Network Requests using Fetch API Simulate a periodic stock price change and display on the console. Hints: (i) Create a method which returns a random number - use Math.random, floor and other methods to return a rounded value. (ii) Invoke the method for every three seconds and stop when
+
+PROGRAM: -
+<!DOCTYPE html>
+<html>
+<head>
+<title>Network Requests</title>
+</head>
+<body>
+<p id = "demo"></p>
+<script>
+async function getUsers() {
+let url = 'https://dummyjson.com/users';
+try {
+let res = await fetch(url);
+return await res.json();
+} catch (error) {
+console.log(error);
+}
+}
+</script>
+</body>
+</html>
+
+5. c) Module Name: Creating Modules, Consuming Modules
+Validate the user by creating a login module. Hints: 
+(i) Create a file login.js with a User class.
+(ii) Create a validate method with username and password as arguments. 
+(iii) If the username and password are equal it will return "Login Successful" else w
+
+PROGRAM: -
+<!DOCTYPE html>
+<html>
+<head>
+<title>Random</title>
+</head>
+<body>
+<p id = "demo"></p>
+<script>
+let date = new Date();
+let sec = date.getSeconds();
+setTimeout(()=>{
+setInterval(()=>{
+document.write(Math.floor((Math.random()*100)+1));
+}, 60 * 1000);
+}, (60 - sec) * 1000);
+setInterval(function(){
+document.write(Math.floor((Math.random()*100)+1));
+}, 1000);
+document.getElementById("demo").innerHTML = setInterval(sec);
+setInterval();
+</script>
+</body>
+</html>

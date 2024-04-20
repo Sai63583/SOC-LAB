@@ -1,0 +1,171 @@
+8. COURSE NAME: EXPRESS.JS
+8. a) Module Name: CRUD Operations
+Write a program to perform various CRUD (Create-Read-Update-Delete) operations using Mongoose library functions.
+
+PROGRAM: -
+.js file
+const mongoose = require('mongoose');
+const StudentSchema = new mongoose.Schema({
+StudentId: Number,
+Name: String,
+Roll: Number,
+Birthday: Date,
+Address: String
+});
+module.exports = mongoose.model(
+'student', StudentSchema, 'Students');
+.js file
+const mongoose = require('mongoose');
+const express = require('express');
+const router = express.Router();
+const StudentModel = require('./studentschema');
+// Connecting to database
+const query = 'mongodb+srv://Username:<password>'
++ '@student.tuufn.mongodb.net/College?'
++ 'retryWrites=true&w=majority'
+const db = (query);
+mongoose.Promise = global.Promise;
+mongoose.connect(db, {
+useNewUrlParser: true,
+useUnifiedTopology: true
+}, function (error) {
+if (error) {
+console.log("Error!" + error);
+}
+});
+module.exports = router;
+router.post('/save', function (req, res) {
+const newStudent = new StudentModel();
+newStudent.StudentId = req.body.StudentId;
+newStudent.Name = req.body.Name;
+newStudent.Roll = req.body.Roll;
+newStudent.Birthday = req.body.Birthday;
+newStudent.save(function (err, data) {
+if (err) {
+console.log(error);
+}
+else {
+res.send("Data inserted");
+}
+});
+});
+OUTPUT: -
+Data inserted
+
+8. b) Module Name: API Development
+In the myNotes application, include APIs based on the requirements provided. (i) API should fetch the details of the notes based on a notesID which is provided in the URL. Test URL -http://localhost:3000/notes/7555 (ii) API should update the details bas
+
+PROGRAM: -
+const express = require('express');
+const bodyParser = require('body-parser');
+const api = require('./notesID');
+const port = 3000;
+const app = express();
+app.listen(port, function () {
+console.log("Server is listening at port:" + port);
+});
+// Parses the text as url encoded data
+app.use(bodyParser.urlencoded({ extended: true }));
+// Parses the text as json
+app.use(bodyParser.json());
+app.use('/notesID', api);
+OUTPUT: -
+
+8. c) Course Name: Express.js
+Module Name: Why Session management, Cookies
+Write a program to explain session management using cookies.
+
+PROGRAM: -
+const express = require("express")
+const session = require('express-session')
+const app = express()
+// Port Number Setup
+var PORT = process.env.port || 3000
+// Session Setup
+app.use(session({
+// It holds the secret key for session
+secret: 'Your_Secret_Key',
+// Forces the session to be saved
+// back to the session store
+resave: true,
+}))
+// Forces a session that is "uninitialized"
+// to be saved to the store
+saveUninitialized: true
+app.get("/", function(req, res){
+// req.session.key = value
+req.session.name = 'Hello world'
+return res.send("Session Set")
+})
+app.get("/session", function(req, res){
+var name = req.session.name
+return res.send(name)
+/* To destroy session you can use
+this function
+req.session.destroy(function(error){
+console.log("Session Destroyed")
+})
+*/
+})
+app.listen(PORT, function(error){
+if(error) throw error
+console.log("Server created Successfully on PORT :", PORT)
+})
+OUTPUT: -
+
+8. d) Course Name: Express.js
+Module Name: Sessions
+Write a program to explain session management using sessions.
+PROGRAM: -
+const express = require("express")
+const session = require('express-session')
+const app = express()
+// Port Number Setup
+var PORT = process.env.port || 3000
+// Session Setup
+app.use(session({
+// It holds the secret key for session
+secret: 'Your_Secret_Key',
+// Forces the session to be saved
+// back to the session store
+resave: true,
+}))
+// Forces a session that is "uninitialized"
+// to be saved to the store
+saveUninitialized: true
+app.get("/", function(req, res){
+// req.session.key = value
+req.session.name = 'Hello world'
+return res.send("Session Set")
+})
+app.get("/session", function(req, res){
+var name = req.session.name
+return res.send(name)
+/* To destroy session you can use
+this function
+req.session.destroy(function(error){
+console.log("Session Destroyed")
+})
+*/
+})
+app.listen(PORT, function(error){
+if(error) throw error
+console.log("Server created Successfully on PORT :", PORT)
+})
+OUTPUT: -
+8.e) Course Name: Express.js
+Module Name: Why and What Security, Helmet Middleware Implement security features in myNotes application
+PROGRAM: -
+const express = require('express');
+const helmet = require('helmet');
+const app = express();
+app.use(helmet());
+app.get('/', (req, res) => {
+res.send("This is the Demo page for"
++ " setting up express server !")
+});
+app.listen(3000, (err) => {
+if (err) { console.log(err); }
+else { console.log('Server started "+ "at http://localhost:3000'); }
+});
+OUTPUT: 

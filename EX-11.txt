@@ -1,0 +1,78 @@
+11. COURSE NAME: TYPESCRIPT
+11. a) Module Name: Extending Interfaces
+Declare a productList interface which extends properties from two other declared interfaces like Category,Product as well as implementation to create a variable of this interface type.
+
+PROGRAM: -
+interface ProductList {
+name:string,
+color:string,
+}
+interface Category extends ProductList{
+}
+interface Product extends ProductList{
+}
+var employee:Category = {
+name:"Mobile",
+color:"Black",
+}
+console.log(employee.name);
+console.log(employee.color);
+OUTPUT: -
+Mobile
+Black
+
+11. b) Module Name: Classes
+Consider the Mobile Cart application, Create objects of the Product class and place them into the productlist array.
+PROGRAM: -
+class Product {
+name: string;
+}
+const person = new Product();
+person.name = "Jane";
+console.log(person);
+OUTPUT: -
+Jane
+
+11. c) Module Name: Constructor
+Declare a class named - Product with the below-mentioned declarations: 
+(i) productId as number property 
+(ii) Constructor to initialize this value 
+(iii) getProductId method to return the message "Product id is <>".
+PROGRAM: -
+class Person {
+name: string;
+constructor(name: string) {
+this.name = name;
+}
+getName(): string {
+return this.name;
+}
+}
+const person = new Person("Jane");
+console.log(person.getName());
+OUTPUT: -
+D:\server\typepro>tsc helloworld.ts
+D:\server\typepro>node helloworld.js
+Jane
+
+11. d) Module Name: Access Modifiers
+Create a Product class with 4 properties namely productId, productName, productPrice,
+productCategory with private, public, static, and protected access modifiers and accessing them
+through Gadget class and its methods.
+PROGRAM: -
+class Person {
+private name: string;
+public constructor(name: string) {
+this.name = name;
+}
+public getName(): string {
+return this.name;
+}
+}
+const person = new Person("Jane");
+console.log(person.getName()); // person.name isn't accessible from outside the class since it's
+private
+OUTPUT: -
+D:\server\typepro>tsc helloworld.ts
+D:\server\typepro>node helloworld.js
+Jane

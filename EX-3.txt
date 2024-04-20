@@ -1,0 +1,130 @@
+3. COURSE NAME: JAVASCRIPT
+3. a) Module Name: Type of Identifiers Write a JavaScript program to find the area of a circle using radius (var and let - reassign and observe the difference with var and let) and PI (const)
+
+PROGRAM: -
+<!DOCTYPE html>
+<html>
+<head>
+<title> Area of Circle </title>
+</head>
+<body>
+<h1> Area of Circle </h1>
+<!--Using java script-->
+<p id="pa"></p>
+<script>
+<!--Using let-->
+let r = 5;
+const PI = 3.14;
+let area = PI*r*r;
+document.write(area);
+</script>
+</body>
+</html>
+
+3. b) Module Name: Primitive and Non-Primitive Data Types Write JavaScript code to display the movie details such as movie name, starring, language, and
+ratings. Initialize the variables with values of appropriate types. Use template literals wherever necessary.
+
+PROGRAM: -
+<!DOCTYPE html>
+<html>
+<head>
+<title>Movie Details</title>
+</head>
+<body>
+<!--Using java script-->
+<h1><p id = "ltemp"></p></h1>
+<script>
+<!--Template Listerals-->
+let t = `Movies List "Favourite"`;
+document.getElementById("ltemp").innerHTML = t;
+var movies = [{name: 'Avatar', starring: 'Jack , Jim',language: 'Telugu',rating:'5'},
+ {name: 'Dracula', starring: 'Tommy', language: 'English',rating:'5'},
+ {name: 'Coco',starring: `Steve "Jocob" `,language: 'French',rating:'5'}];
+for(var i=0; i < movies.length; i++){
+document.write(movies[i].name + " " +movies[i].starring + " " +movies[i].language + " " 
++movies[i].rating + '<br/>'); }
+</script>
+</body>
+</html>
+
+3.c) Module Name: Operators and Types of Operators Write JavaScript code to book movie tickets online and calculate the total price, considering the number of tickets and price per ticket as Rs. 150. Also, apply a festive season discount of 10% and calculate the discounted amount.
+
+PROGRAM: -
+<!DOCTYPE html>
+<html>
+<head>
+<title> Ticket Booking </title>
+</head>
+<body>
+<h1> Ticket Booking </h1>
+<script>
+let seats = [ 1, 2, 4 ]; 
+let M = seats.length;
+let price = 150;
+let discount = 1;
+ if(discount == 0){
+ document.write("Total Amount :" + (M * price));
+</script>
+</body>
+</html>
+}
+if(discount == 1){
+document.write("Total Discount :" + (M * price * (10/100)));
+}
+3. d) Module Name: Types of Statements, Non - Conditional Statements, Types of Conditional Statements, if Statements, switch Statements Write a JavaScript code to book movie tickets online and calculate the total price based on the 3 conditions: (a) If seats to be booked are not more than 2, the cost per ticket remains Rs. 150. (b) If seats are 6 or more, booking is not allowed.
+
+PROGRAM: -
+<!DOCTYPE html>
+<html>
+<head>
+<title> Ticket Booking </title>
+</head>
+<body>
+<h1> Ticket Booking </h1>
+Name: <input type="text" id="tickets">
+<button onclick="myFunction()">submit</button><br><br>
+Total Amount:<p id="demo"></p>
+<script>
+function myFunction() {
+var x = document.getElementById("tickets").value;
+let price = 150;
+if(x <= 2){
+document.getElementById("demo").innerHTML = x*price;
+}
+not allowed";
+if(x >= 6){
+document.getElementById("demo").innerHTML = "6 or more tickets
+}
+}
+</script>
+</body>
+</html>
+
+3. e) Module Name: Types of LoopsWrite a JavaScript code to book movie tickets online and calculate the total price based on the 3 conditions: (a) If seats to be booked are not more than 2, the cost per ticket remains Rs. 150. (b) If seats are 6 or more, booking is not allowed.
+
+PROGRAM: -
+<!DOCTYPE html>
+<html>
+<head>
+<title> Ticket Booking </title>
+</head>
+<body>
+<h1> Ticket Booking </h1>
+Name: <input type="text" id="tickets">
+<button onclick="myFunction()">submit</button><br><br>
+Total Amount:<p id="demo"></p>
+<script>
+function myFunction() {
+var x = document.getElementById("tickets").value;
+let price = 150;
+if(x <= 2){
+document.getElementById("demo").innerHTML = x*price;
+}
+not allowed";
+if(x >= 6){
+document.getElementById("demo").innerHTML = "6 or more tickets
+}
+}
+</script>
+</body>
+</html>

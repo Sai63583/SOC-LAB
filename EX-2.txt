@@ -1,0 +1,166 @@
+2. COURSE NAME: HTML5 - THE LANGUAGE
+2. a) Module Name: Creating Table Elements, Table Elements: Colspan/Rowspan Attributes,border, cellspacing, cellpadding attributes Enhance the details page of IEKart's Shopping application by adding a table element to display the available mobile/any inventories.
+
+PROGRAM: -
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+border: 1px solid black;
+}
+th, td {
+padding: 15px;
+}
+</style>
+</head>
+<body>
+<h1>The table element</h1>
+<table>
+<tr>
+<th>Month</th>
+<th>Savings</th>
+</tr>
+<tr>
+<td>January</td>
+<td>$100</td>
+</tr>
+<tr>
+<td>February</td>
+<td>$80</td>
+</tr>
+</table>
+<h1>Colspan and rowspan</h1>
+<h3>Cell that spans two columns:</h3>
+<table>
+<tr>
+<th>Name</th>
+<th>Email</th>
+<th colspan="2">Phone</th>
+</tr>
+<tr>
+<td>John Doe</td>
+<td>john.doe@example.com</td>
+<td>123-45-678</td>
+<td>212-00-546</td>
+</tr>
+</table>
+<h3>Cell that spans two rows:</h3>
+<table>
+<tr>
+<th>Name:</th>
+<td>John Doe</td>
+</tr>
+<tr>
+<th>Email:</th>
+<td>john.doe@example.com</td>
+</tr>
+<tr>
+<th rowspan="2">Phone:</th>
+<td>123-45-678</td>
+</tr>
+<tr>
+<td>212-00-546</td>
+</tr>
+</table>
+</body>
+</html>
+2. b) Module Name: Creating Form Elements, Color and Date Pickers, Select and Datalist Elements Using the form elements create Signup page for IEKart's Shopping application.
+
+PROGRAM: -
+<!DOCTYPE html>
+<html>
+<body>
+<h2>The input Element</h2>
+<form action="/action_page.php">
+<label for="fname">First name:</label><br>
+<input type="text" id="fname" name="fname"><br><br>
+<!--date picker-->
+<label for="birthday">Birthday:</label>
+<input type="date" id="birthday" name="birthday"><br><br>
+<!--color picker-->
+<label for="color">Color:</label>
+<input type="color" id="color" name="color"><br><br>
+<!--datalist-->
+<input list="courses" name="course" id="course">
+<datalist id="courses">
+<option value="Java">
+<option value="C++">
+<option value="Python">
+<option value="DSA">
+<option value="ML and AI">
+</datalist><br><br>
+<label for="courses">
+Choose your favorite
+course from the list:
+</label>
+<!--select-->
+<select id="courses">
+<option value="Java">Java</option>
+<option value="C++">C++</option>
+<option value="Python">Python</option>
+RCEE:CSE:III-II:SOC-1:Mean Stack Technologies Lab Page 18
+<option value="DSA">DSA</option>
+<option value="ML and AI">ML and AI</option>
+</select><br><br>
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>
+2. c) Module Name: Input Elements - Attributes Enhance Signup page functionality of IEKart's Shopping application by adding attributes to input elements.
+
+PROGRAM: -
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Input Attributes</h2>
+<form action="/action_page.php">
+<label for="fname">First name:</label><br>
+<input type="text" id="fname" name="fname"><br>
+<label for="lname">Last name:</label><br>
+<input type="text" id="lname" name="lname"><br>
+<label for="pwd">Password:</label><br>
+<input type="password" id="pwd" name="pwd"><br>
+<input type="radio" id="html" name="fav_language" value="HTML">
+<label for="html">HTML</label><br>
+<input type="radio" id="css" name="fav_language" value="CSS">
+<label for="css">CSS</label><br>
+<input type="radio" id="javascript" name="fav_language" value="JavaScript">
+<label for="javascript">JavaScript</label><br><br>
+<input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+<label for="vehicle1"> I have a bike</label><br>
+<input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+<label for="vehicle2"> I have a car</label><br>
+<input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+<label for="vehicle3"> I have a boat</label><br>
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>
+
+2. d) Module Name: Media, Iframe Add media content in a frame using audio, video, iframe elements to the Home page of IEKart's Shopping application.
+
+PROGRAM: -
+<!DOCTYPE html>
+<html>
+<body>
+<h2>HTML Iframes</h2>
+<p>You can use the height and width attributes to specify the size of the iframe:</p>
+<iframe src="demo_iframe.htm" height="200" width="300" title="Iframe Example">
+</iframe> <br> <br>
+<video width="400" controls>
+<source src="mov_bbb.mp4" type="video/mp4">
+<source src="mov_bbb.ogg" type="video/ogg">
+Your browser does not support HTML video.
+</video>
+<p>
+Video courtesy of
+<a href="https://www.bigbuckbunny.org/" target="_blank">Big Buck Bunny</a>.
+</p> <br> <br>
+<audio controls>
+<source src="horse.ogg" type="audio/ogg">
+<source src="horse.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</body>
+</html>

@@ -1,0 +1,326 @@
+1. COURSE NAME: HTML5 - THE LANGUAGE
+1. a) Module Name: Case-insensitivity, Platform-independency, DOCTYPEDeclaration,Types of Elements, HTML Elements - Attributes, Metadata Element.Include the Metadata element in Homepage.html for providing description as "IEKart's is an online shopping website that sells goods in retail. This company deals with various categories like Electronics, Clothing, Accessories etc.
+
+PROGRAM: -
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="as IEKart's is an online shopping website that sells goods in retail. This company deals with various categories like Electronics, Clothing, Accessories etc.">
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<meta name="author" content="UNNI">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Demo web Page </title>
+</head>
+<body>
+<!--this is a comment in HTML-->
+<h1> Online EKART SHOPPING WEBSITE</h1>
+</body>
+</html>
+
+1. b) Module Name: Sectioning Elements.Enhance the Homepage.html of IEKart's Shopping Application by adding appropriatesectioning elements.
+
+PROGRAM: -
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="as IEKart's is an online shopping website that sells goods in retail. This company deals with various categories like Electronics, Clothing, Accessories etc.">
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<meta name="author" content="UNNI">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Demo web Page </title>
+<style>
+aside {
+width: 30%;
+padding-left: 15px;
+margin-left: 15px;
+float: right;
+font-style: italic;
+background-color: lightgray;
+}
+header {
+text-align: center;
+padding: 3px;
+background-color: DarkSalmon;
+color: white;
+}
+footer {
+text-align: center;
+padding: 3px;
+background-color: DarkSalmon;
+color: white;
+}
+</style>
+</head>
+<header>
+<article>
+<h1> Online EKART SHOPPING WEBSITE</h1>
+</article>
+<aside>
+<p>IEKart's is an online shopping website that sells goods in retail. This company deals with various categories like Electronics, Clothing, Accessories etc.</p>
+</aside>
+</header>
+<body>
+<!--this is a comment in HTML-->
+<article class="all-browsers">
+<h1>Most Popular Browsers</h1>
+<article class="browser">
+<nav>
+<a href="https://www.google.com/">Google</a>
+</nav>
+</article>
+<article class="browser">
+<nav>
+<a href="https://www.microsoft.com/en-us/edge?form=MA13FJ">Edge</a>
+</nav>
+</article>
+<article class="browser">
+<nav>
+<a href="https://www.opera.com/">Opera</a>
+</nav>
+</article>
+</article>
+<footer>
+<article>
+<h1> Online EKART SHOPPING WEBSITE</h1>
+<p>Posted IEKART</p>
+</article>
+</footer>
+</body>
+</html>
+
+1. c) Module Name: Paragraph Element, Division and Span Elements, List Element Make use of appropriate grouping elements such as list items to "About Us" page of IEKart's Shopping Application
+
+PROGRAM: -
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="as IEKart's is an online shopping website that sells goods in retail. This company deals with various categories like Electronics, Clothing, Accessories etc.">
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<meta name="author" content="UNNI">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Demo web Page </title> 
+<style>
+aside {
+width: 30%;
+padding-left: 15px;
+margin-left: 15px;
+float: right;
+font-style: italic;
+background-color: lightgray;
+}
+header {
+text-align: center;
+padding: 3px;
+background-color: DarkSalmon;
+color: white;
+}
+footer {
+text-align: center;
+padding: 3px;
+background-color: DarkSalmon;
+color: white;
+}
+li{padding: 4px;}
+div{ color:blue;
+6
+height: wrap; width: wrap}
+</style> 
+</head>
+<header>
+<article>
+<h1> Online IEKART SHOPPING WEBSITE</h1>
+</article>
+<aside>
+<p>IEKart's is an online shopping website that sells goods in retail. This company deals with various categories like Electronics, Clothing, Accessories etc.</p>
+</aside>
+</header>
+<body>
+<!--this is a comment in HTML--> 
+<div>
+<!--list attribute-->
+<ul>
+<li>Mobiles</li>
+<li>Accessories</li>
+<li>Electronics</li>
+</ul>
+</div>
+<!--div attribute-->
+<div>
+<!--paragraph attribute-->
+<p> IEKART </p>
+<p> ELURU </p>
+<!--span attribute-->
+<p><span style= "color:red"> WEST GODAVARI,</span> </p>
+</div>
+<!--Sectioning element-->
+<footer>
+<article>
+<p>Posted IEKART</p>
+</article>
+</footer> 
+</body>
+</html>
+
+1. d) Module Name: Link Element
+Link "Login", "SignUp" and "Track order" to "Login.html", "SignUp.html" and "Track.html"
+page respectively. Bookmark each category to its details of IEKart's Shopping application.
+
+PROGRAM: -
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="as IEKart's is an online shopping website that sells goods in retail. This company deals with various categories like Electronics, Clothing, Accessories etc.">
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<meta name="author" content="UNNI">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Demo web Page </title>
+<style> aside {
+width: 30%; padding-left: 15px; margin-left: 15px; float: right;
+font-style: italic; background-color: lightgray;
+}
+header {
+text-align: center; padding: 3px;
+background-color: DarkSalmon; color: white;
+}
+footer {
+text-align: center; padding: 3px;
+background-color: DarkSalmon; color: white;
+}
+li{padding: 4px;} div{ color:blue;
+height: wrap; width: wrap}
+</style>
+</head>
+<header>
+<article>
+<h1> Online IEKART SHOPPING WEBSITE</h1>
+</article>
+<aside>
+<p>IEKart's is an online shopping website that sells goods in retail. This company deals with various categories like Electronics, Clothing, Accessories etc.</p>
+</aside>
+</header>
+<body>
+<!--this is a comment in HTML-->
+<div>
+<!--list link attribute-->
+<ul>
+<li><a href="Login.html">LOGIN</a></li>
+<li><a href="SignUp.html">SIGN UP</a></li>
+<li><a href="Track.html">TRACK ORDER</a></li>
+</ul>
+</div>
+<!--div attribute-->
+<div>
+<!--paragraph attribute-->
+<p> IEKART </p>
+<p> ELURU </p>
+<!--span attribute-->
+<p><span style= "color:red"> WEST GODAVARI,</span> </p>
+</div>
+<!--Sectioning element-->
+<footer>
+<article>
+<p>Posted IEKART</p>
+</article>
+</footer>
+</body>
+</html>
+1. e) Module Name: Character Entities Add the © symbol in the Home page footer of IEKart's Shopping application.
+
+PROGRAM: -
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="as IEKart's is an online shopping website that sells goods in retail. This company deals with various categories like Electronics, Clothing, Accessories etc.">
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<meta name="author" content="UNNI">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Demo web Page </title>
+<style> aside { width: 30%;
+padding-left: 15px; margin-left: 15px; float: right;
+font-style: italic; background-color: lightgray;
+}
+header {
+text-align: center; padding: 3px;
+background-color: DarkSalmon; color: white;
+}
+footer {
+text-align: center; padding: 3px;
+background-color: DarkSalmon; color: white;
+}
+li {padding: 4px;} div { color:blue;
+height: wrap; width: wrap}
+</style>
+</head>
+<header>
+<article>
+<h1> Online IEKART SHOPPING WEBSITE</h1>
+</article>
+<aside>
+<p>IEKart's is an online shopping website that sells goods in retail. This company deals with various categories like Electronics, Clothing, Accessories etc.</p>
+</aside>
+</header>
+<body>
+<!--this is a comment in HTML-->
+<div>
+<!--list link attribute-->
+<ul>
+<li><a href="Login.html">LOGIN</a></li>
+<li><a href="SignUp.html">SIGN UP</a></li>
+<li><a href="Track.html">TRACK ORDER</a></li>
+</ul>
+</div>
+<!--div attribute-->
+<div>
+<!--paragraph attribute-->
+<p> IEKART </p>
+<p> ELURU </p>
+<!--span attribute-->
+<p><span style= "color:red"> WEST GODAVARI,</span> </p>
+</div>
+<!--Sectioning element-->
+<footer>
+<article>
+<!--ADDING COPY RIGHTS element-->
+&copy; IEKART
+</article>
+</footer>
+</body>
+</html>
+
+1. f) Module Name: HTML5 Global Attributes Add the global attributes such as content editable, spellcheck, id etc. to enhance the Signup Page functionality of IEKart's Shopping application.
+
+PROGRAM: -
+<!DOCTYPE html>
+<html>
+<head>
+<title> IEKart web Page </title>
+<style>
+#myHeader {
+color: red;
+text-align: center;
+}
+</style>
+</head>
+<header>
+<article>
+<h1> Online EKART SHOPPING WEBSITE</h1>
+</article>
+</header>
+<body>
+<!--contenteditable attribute-->
+<p contenteditable="true">This is a paragraph. It is editable. Try to change this text.</p>
+<!--spellcheck attribute-->
+<p contenteditable="true" spellcheck="true">This is a spellcheck</p>
+<footer>
+<article>
+<h1 id="myHeader"> Online EKART SHOPPING WEBSITE</h1>
+<p>Posted IEKART</p>
+</article>
+</footer>
+</body>
+</html>

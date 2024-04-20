@@ -1,0 +1,137 @@
+4. COURSE NAME: JAVASCRIPT
+4. a) Module Name: Types of Functions, Declaring and Invoking Function, Arrow Function, Function Parameters, Nested Function, Built-in Functions, Variable Scope in Functions Write a JavaScript code to book movie tickets online and calculate the total price based on the 3 conditions: 
+(a) If seats to be booked are not more than 2, the cost per ticket remains Rs. 150.
+(b) If seats are 6 or more, booking is not allowed.
+
+PROGRAM: -
+<!DOCTYPE html>
+<html>
+<head>
+<title> Ticket Booking </title>
+</head>
+<body>
+<h1> Ticket Booking </h1>
+Name: <input type="text" id="tickets">
+<button onclick="myFunction()">submit</button><br><br>
+Total Amount:<p id="demo"></p>
+<script>
+function myFunction() {
+var x = document.getElementById("tickets").value;
+let price = 150;
+if(x <= 2){
+document.getElementById("demo").innerHTML = x*price;
+}
+not allowed";
+if(x >= 6){
+document.getElementById("demo").innerHTML = "6 or more tickets
+}
+}
+</script>
+</body>
+</html>
+
+4.b) Module Name: Working with Classes, Creating and Inheriting Classes
+Create an Employee class extending from a base class Person. Hints:
+(i) Create a class Person with name and age as attributes.
+(ii) Add a constructor to initialize the values
+(iii) Create a class Employee extending Person with additional attributes role
+
+PROGRAM: -
+<!DOCTYPE html>
+<html>
+<head>
+<title> About class </title>
+</head>
+<body>
+<h3> About class constructor </h3>
+<p id = "demo"></p>
+<script>
+class Person{
+constructor(name, age) {
+this.name = name;
+this.age = age;
+}
+present() {
+return 'My name ' + this.name + ' my age' + this.age;
+}
+}
+class Employee extends Person{
+constructor(name, age) {
+super(name, age);
+}
+show() {
+return this.present();;
+}
+}
+const emp = new Employee("Unni", "30");
+document.getElementById("demo").innerHTML = emp.show();
+</script>
+</body>
+</html>
+
+4.c) Module Name: In-built Events and Handlers
+Write a JavaScript code to book movie tickets online and calculate the total price based on the 3 conditions: 
+(a) If seats to be booked are not more than 2, the cost per ticket remains Rs. 150. 
+(b) If seats are 6 or more, booking is not allowed
+
+PROGRAM: -
+<!DOCTYPE html>
+<html>
+<head>
+<title> Ticket Booking </title>
+</head>
+<body>
+<h1> Ticket Booking </h1>
+Name: <input type="text" id="tickets">
+<button onclick="myFunction()">submit</button><br><br>
+Total Amount:<p id="demo"></p>
+<script>
+function myFunction() {
+var x = document.getElementById("tickets").value;
+let price = 150;
+if(x <= 2){
+document.getElementById("demo").innerHTML = x*price;
+}if(x >= 6){
+document.getElementById("demo").innerHTML = "6 or more tickets
+not allowed";
+}
+}
+</script>
+</body>
+</html>
+
+4.d) Module Name: Working with Objects, Types of Objects, Creating Objects, Combining and cloning Objects using Spread operator, Destructuring Objects, Browser Object Model, Document Object Model If a user clicks on the given link, they should see an empty cone, a different heading, and a
+different message and a different background color. If user clicks again, they should see a re-filled cone, a different heading, a different message.
+
+PROGRAM: -
+<!DOCTYPE html>
+<html>
+<head>
+<title>cone</title>
+</head>
+<body>
+<h3 onclick="draw()">Click Here</h3>
+<h3 onclick="draw2()">Click Here</h3><br><br>
+Message:<p id = "message"></p>
+Head:<h4 id= "head"></h4>
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid
+#d3d3d3;"></canvas>
+<script>
+function draw() {
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.arc(95,50,40,0,2*Math.PI);
+ctx.stroke();
+document.getElementById("message").innerHTML = "Hello";
+document.getElementById("head").innerHTML = "THIS IS DOM";
+}
+function draw2() {
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.fillStyle="#3370d4";
+ctx.beginPath();
+ctx.arc(95,50,40,0,2*Math.PI);
+ctx.stroke();
+ctx.closePath();
+ctx.fill();

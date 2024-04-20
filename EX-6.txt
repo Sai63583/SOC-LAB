@@ -1,0 +1,88 @@
+6. COURSE NAME: NODE.JS
+6. a) Module Name: How to use Node.js Verify how to execute different functions successfully in the Node.js platform.
+
+PROGRAM: -
+name.js
+var http = require('http');
+http.createServer(function (req, res) {
+res.writeHead(200, {'Content-Type': 'text/plain'});
+res.end('Hello World!');
+}).listen(6060);
+run using node name.js
+
+OUTPUT: -
+node name.js
+http://localhost:6060
+Hello World!
+
+6. b) Module Name: Create a web server in Node.js
+Write a program to show the workflow of JavaScript code executable by creating web server in Node.js.
+
+PROGRAM: -
+name.js
+var http = require('http');
+http.createServer(function (req, res) {
+res.writeHead(200, {'Content-Type': 'text/plain'});
+res.end('Hello World!');
+}).listen(6060);
+run using node name.js
+
+OUTPUT: -
+node name.js
+http://localhost:6060
+Hello World!
+
+6. c) Module Name: Modular programming in Node.js
+Write a Node.js module to show the workflow of Modularization of Node application
+
+PROGRAM: -
+sourcecode6c.js
+//http module
+var http = require('http');
+// user module
+var dt = require('./usermodule');
+http.createServer(function (req, res) {
+res.writeHead(200, {'Content-Type': 'text/html'});
+res.write("The date and time is currently: " + dt.myDateTime());
+res.end();
+}).listen(6060);
+usermodule.js
+exports.myDateTime = function () {
+return Date();
+};
+OUTPUT: -
+The date and time is currently:
+
+6. d) Module Name: Restarting Node Application
+Write a program to show the workflow of restarting a Node application
+
+PROGRAM: -
+npm install forever
+// or
+yarn install forever
+{
+"start": "forever start app.js"
+}
+app.get("/system/reboot", (req, res)=>{
+setTimeout(function () {
+// Listen for the 'exit' event.
+// This is emitted when our app exits.
+process.on("exit", function () {
+// Resolve the `child_process` module, and `spawn`
+// a new process.
+// The `child_process` module lets us
+// access OS functionalities by running any bash command.`.
+require("child_process")
+.spawn(
+process.argv.shift(),
+process.argv,
+{
+cwd: process.cwd(),
+detached: true,
+stdio: "inherit"
+}
+);
+});
+process.exit();
+}, 1000);
+})

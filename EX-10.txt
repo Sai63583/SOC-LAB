@@ -1,0 +1,73 @@
+10. COURSE NAME: TYPESCRIPT
+10. a) Module Name: Rest Parameter
+Implement business logic for adding multiple Product values into a cart variable which is type of string array.
+PROGRAM: -
+function add(a: number, b: number, ...rest: number[]) {
+return a + b + rest.reduce((p, c) => p + c, 0);
+}
+console.log("Rest parameter: " + add(10,10,10,10,10));
+OUTPUT: -
+Rest parameter: 50
+
+10. b) Module Name: Creating an Interface
+Declare an interface named - Product with two properties like productId and productName with a number and string datatype and need to implement logic to populate the Product details.
+PROGRAM: -
+interface Product {
+productId:number,
+productName:string
+}
+var customer:Product = {
+productId:1001,
+productName:"Hanks"
+}
+console.log("Customer Object ")
+console.log(customer.productId)
+console.log(customer.productName)
+OUTPUT: -
+Customer Object
+1001
+Hanks
+
+10. c) Module Name: Duck Typing
+Declare An Interface Named - Product With Two Properties Like Productid And Productname With The Number And String Datatype And Need To Implement Logic To Populate The Product Details.
+PROGRAM: -
+class pigeon {
+sound = "coos";
+}
+class owl {
+sound = "hoots";
+}
+class penguin {
+sound = "peeps";
+swim() {
+console.log("i'm a bird and i can swim");
+}
+}
+let pigeon: pigeon = new owl(); // works
+let owl: owl = new pigeon(); // works
+let pigeon2: pigeon = new penguin(); // works
+// printing values
+console.log("a pigeon " + pigeon.sound);
+console.log("an owl " + owl.sound);
+console.log("a pigeon " + pigeon2.sound);
+OUTPUT: -
+A pigeon coos
+An owl hoots
+A pigeon peeps
+
+10. d) Module Name: Function Type
+Declare an interface with function type and access its value.
+PROGRAM: -
+type Sum = (a: number, b: number) => number
+// Sum as argument
+function someFunc1(func: Sum): void {
+func(1, 2)
+}
+console.log(someFunc1((a, b) => a + b)); // OK
+// Sum returned
+function someFunc2(): Sum {
+return (a, b) => a + b
+}
+console.log(someFunc2()(1, 2)); // OK
+OUTPUT: -
+3

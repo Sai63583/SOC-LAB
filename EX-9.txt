@@ -1,0 +1,111 @@
+8. COURSE NAME: TYPESCRIPT
+9. a) Module Name: Basics of TypeScript On the page, display the price of the mobile-based in three different colors. Instead of using the number in our code, represent them by string values like GoldPlatinum, PinkGold, SilverTitanium.
+
+PROGRAM: -
+test.ts
+export const colorize = new (class {
+color = (code: number, ended = false, ...messages: any[]) =>
+`\x1b[${code}m${messages.join(" ")}${ended ? "\x1b[0m" : ""}`;
+GoldPlatinum = this.color.bind(null, 31, false);
+PinkGold = this.color.bind(null, 32, false);
+SilverTitanium = this.color.bind(this, 33, false);
+})();
+const color = colorize;
+function sayHelloWorld(): void {
+console.log(color.GoldPlatinum('20000'));
+console.log(color.PinkGold('30000'));
+console.log(color.SilverTitanium('40000'));
+}
+sayHelloWorld();
+compile
+tsc test.ts
+test.js will create automatically
+then run using command
+node test.js
+OUTPUT: -
+
+9. b) Module Name: Function
+Define an arrow function inside the event handler to filter the product array with the selected product object using the productId received by the function. Pass the selected product object to the next screen.
+
+PROGRAM: -
+<html>
+<head>
+<title>TS - Basic Concepts</title>
+</head>
+<body>
+Hello World <br><br>
+<p id="demo" onclick=i></p>
+<script src="helloworld.js"></script>
+<script>
+<button onclick="myFunction()">Click me</button>
+var i = document.getElementById("demo");
+</script>
+</body>
+</html>
+helloworld.ts
+let product = (x: string, y: string): string => {
+return x + y;
+}
+document.getElementById("demo").innerHTML = product("hello", "world");
+OUTPUT: -
+
+9. c) Module Name: Parameter Types and Return Types Consider that developer needs to declare a function - getMobileByVendor which accepts string
+as input parameter and returns the list of mobiles
+PROGRAM: -
+helloworld.ts
+function multiply(a: number, b: number) {
+return a * b;
+}
+console.log(multiply(2,5));
+OUTPUT: -
+10
+
+9. d) Module Name: Arrow Function
+Consider that developer needs to declare a manufacturer's array holding 4 objects with id and price as a parameter and needs to implement an arrow function - myfunction to populate the id parameter of manufacturers array whose price is greater than or equ
+PROGRAM:
+var man = [
+{
+id: 1001,
+price: 2000
+},
+{
+id: 1002,
+price: 3000
+},
+{
+id: 1003,
+price: 4000
+},
+{
+id: 1004,
+price: 4000
+}];
+let product = (id: number, price: number): any => {
+for (var i = 0; i < man.length; i++) {
+if (man[i].id >= id) {
+console.log(man[i].price);
+}
+}
+}
+console.log(product(1002, 2000))
+OUTPUT: -
+3000
+4000
+4000
+Undefined
+
+9. e) Module Name: Optional and Default Parameters
+Declare a function - getMobileByManufacturer with two parameters namely manufacturer andid, where manufacturer value should passed as Samsung and id parameter should be optional while invoking the function, if id is passed as 101 then this function shoul
+PROGRAM: -
+function add(a: number, b: number, c?: number) {
+return a + b + (c || 10);
+}
+console.log("Optional" + add(2,5))
+//default paramenter
+function pow(value: number, exponent: number = 10) {
+return value ** exponent;
+}
+console.log("default: " + pow(10));
+OUTPUT: -
+Optional17
+default: 10000000000

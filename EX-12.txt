@@ -1,0 +1,100 @@
+12.a) Course Name: Typescript
+Module Name: Properties and Methods
+Create a Product class with 4 properties namely productId and methods to setProductId() and  getProductId(). 
+PROGRAM: -
+class Product {
+ private productId: number;
+ constructor(productId: number) 
+{
+ this.productId = productId;
+ }
+ // Method to set productId
+ setProductId(productId: 
+number): void {
+ this.productId = productId;
+ }
+ // Method to get productId
+ getProductId(): number {
+ return this.productId;
+ }
+}
+// Example usage
+const product = new Product(1);
+console.log("Initial Product ID:", product.getProductId()); // Output: 1
+product.setProductId(2);
+console.log("Updated Product ID:", product.getProductId()); // Output: 2
+OUTPUT: -
+Initial Product ID: 1
+Updated Product ID: 2
+
+12.b Course Name: Typescript
+Module Name: Creating and using Namespaces
+Create a namespace called ProductUtility and place the Product class definition in it. Import the Product class inside productlist file and use it. 
+PROGRAM: -
+// ProductUtility.ts
+namespace ProductUtility {
+ export class Product {
+ private productId: number;
+ constructor(productId: number) {
+ this.productId = productId;
+ }
+ // Method to set productId
+ setProductId(productId: number): void {
+ this.productId = productId;
+ }
+ // Method to get productId
+ getProductId(): number {
+ return this.productId;
+ }
+ }
+}
+// productlist.ts
+/// <reference path="ProductUtility.ts" />
+// Importing Product class from ProductUtility namespace
+import { ProductUtility } from './ProductUtility';
+// Example usage
+const product = new ProductUtility.Product(1);
+console.log("Initial Product ID:", product.getProductId()); // Output: 1
+product.setProductId(2);
+console.log("Updated Product ID:", product.getProductId()); // Output: 2
+OUTPUT: -
+Initial Product ID: 1
+Updated Product ID: 2
+
+12.c) Course Name: Typescript
+Module Name: Creating and using Modules
+Consider the Mobile Cart application which is designed as part of the functions in a module to calculate the total price of the product using the quantity and price values and assign it to a  totalPrice variable.
+PROGRAM: -
+// MobileCartModule.ts
+export function calculateTotalPrice(quantity: number, price: number): number {
+ return quantity * price;
+}
+// main.ts
+import { calculateTotalPrice } from './MobileCartModule';
+const quantity = 5;
+const price = 10000;
+const totalPrice = calculateTotalPrice(quantity, price);
+console.log("Total Price:", totalPrice); // Output: 50000
+OUTPUT: -
+Total Price: 50000
+
+12.d) Course Name: Typescript
+Module Name: What is Generics, What are Type Parameters, Generic Functions, Generic Constraints Create a generic array and function to sort numbers as well as string values.
+PROGRAM: -
+// GenericSort.ts
+// Define a generic function to sort an array of any type T
+function sortArray<T>(array: T[]): T[] {
+ // Use the built-in sort method, which sorts elements in place
+ // For numbers and strings, this will use the default comparison behavior
+ return array.sort();
+}
+// Example usage
+const numbers: number[] = [3, 1, 4, 2];
+const sortedNumbers = sortArray(numbers);
+console.log("Sorted Numbers:", sortedNumbers); // Output: [1, 2, 3, 4]
+const strings: string[] = ["banana", "apple", "cherry", "date"];
+const sortedStrings = sortArray(strings);
+console.log("Sorted Strings:", sortedStrings); // Output: ["apple", "banana", "cherry", "date"]
+OUTPUT: -
+Sorted Numbers: [1, 2, 3, 4]
+Sorted Strings: ["apple", "banana", "cherry", "date"]
